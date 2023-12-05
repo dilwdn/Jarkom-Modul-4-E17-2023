@@ -19,10 +19,10 @@ Jaringan Komputer (F) </br>
 
 ## GNS3 VLSM
 ### Topologi
-![]()
+![](images/VlsmTopo.jpg)
 
 ### Tree
-![]()
+![](images/VlsmTree.jpg)
 
 ### Pembagian IP VLSM
 | Subnet | Network ID | Netmask | Broadcast |
@@ -519,5 +519,27 @@ route add -net 10.45.0.32 netmask 255.255.255.252 gw 10.45.0.22
 #21
 route add -net 10.45.0.36 netmask 255.255.255.252 gw 10.45.0.38 X
 ```
-
+#### Tambahkan setiap konfigurasi pada /root/.bashrc
+```sql
+nano /root/.bashrc
+```
 ### Hasil Testing
+RoyalCapital - WilleRegion
+
+![](images/royalCapital.png)
+
+LaubHills - AppetitRegion
+
+![](images/LaubHills.png)
+
+RohrRoad - SchewerMountains
+
+![](images/RohrRoad.png)
+
+RiegelCanyon - GranzChannel
+
+![](images/RiegelCanyon.png)
+
+TurkRegion - Stark
+
+![](images/TurkRegion.png)
