@@ -11,11 +11,333 @@ Jaringan Komputer (F) </br>
 
 ## Cisco CIDR
 ### Topologi
-### Tree
-### Pembagian IP CIDR
-### Routing
-### Hasil Testing
+#### Penggabungan 1
+![](images/CIDR1.png)
+![](images/CIDRTABLE1.png)
 
+#### Penggabungan 2
+![](images/CIDR2.png)
+![](images/CIDRTABLE2.png)
+
+#### Penggabungan 3
+![](images/CIDR3.png)
+![](images/CIDRTABLE3.png)
+
+#### Penggabungan 4
+![](images/CIDR4.png)
+![](images/CIDRTABLE4.png)
+
+#### Penggabungan 5
+![](images/CIDR5.png)
+![](images/CIDRTABLE5.png)
+
+#### Penggabungan 6
+![](images/CIDR6.png)
+![](images/CIDRTABLE6.png)
+
+#### Penggabungan 7
+![](images/CIDR7.png)
+![](images/CIDRTABLE7.png)
+
+#### Hasil Penggabungan
+![](images/CIDRTopoFinal.png)
+![](images/CIDRTABLEFINAL.png)
+
+### Tree
+![](images/CIDRTREE.png)
+
+### Pembagian IP CIDR
+| Subnet | Network ID    | Netmask           | Broadcast     |
+|--------|---------------|-------------------|---------------|
+| A1     | 10.45.0.0     | 255.255.248.0     | 10.45.7.255   |
+| A2     | 10.45.16.0    | 255.255.252.0     | 10.45.19.255  |
+| A3     | 10.45.20.0    | 255.255.255.248   | 10.45.20.7    |
+| A4     | 10.45.64.0    | 255.255.255.224   | 10.45.64.31   |
+| A5     | 10.46.80.0    | 255.255.255.248   | 10.46.80.7    |
+| A6     | 10.46.4.0     | 255.255.255.192   | 10.46.4.63    |
+| A7     | 10.46.0.0     | 255.255.252.0     | 10.46.3.255   |
+| A8     | 10.46.16.0    | 255.255.254.0     | 10.46.17.255  |
+| A9     | 10.46.64.4    | 255.255.255.0     | 10.46.64.255  |
+| A10    | 10.46.72.4    | 255.255.252.0     | 10.46.75.255  |
+| A11    | 10.46.80.8    | 255.255.255.252   | 10.46.80.11   |
+| A12    | 10.47.0.0     | 255.255.255.0     | 10.47.0.255   |
+| A13    | 10.45.4.0     | 255.255.255.252   | 10.45.4.3     |
+| A14    | 10.45.20.8    | 255.255.255.252   | 10.45.20.11   |
+| A15    | 10.45.32.0    | 255.255.255.252   | 10.45.32.3    |
+| A16    | 10.45.128.0   | 255.255.255.252   | 10.45.128.3   |
+| A17    | 10.46.128.0   | 255.255.255.252   | 10.46.128.3   |
+| A18    | 10.46.32.0    | 255.255.255.252   | 10.46.32.3    |
+| A19    | 10.46.8.0     | 255.255.255.252   | 10.46.8.3     |
+| A20    | 10.46.64.0    | 255.255.255.252   | 10.46.72.3    |
+| A21    | 10.47.1.0     | 255.255.255.252   | 10.47.1.3     |
+
+### Subnetting
+
+#### A1
+##### AppetitRegion
+- Gateway = 10.45.0.1
+- Address = 10.45.0.2
+- Subnet Mask = 255.255.248.0
+
+##### LaubHills
+- Gateway = 10.45.0.1
+- Address = 10.45.0.3
+- Subnet Mask = 255.255.248.0
+
+##### Fern (Fa0/1)
+- Address = 10.45.0.1
+- Subnet Mask = 255.255.248.0
+
+#### A2
+##### RohrRoad
+- Gateway = 10.45.16.1
+- Address = 10.45.16.2
+- Subnet Mask = 255.255.252
+
+##### Flamme (Fa1/1)
+- Address = 10.45.16.1
+- Subnet Mask = 255.255.252.0
+
+#### A3
+##### SchwerMountains
+- Gateway = 10.45.20.1
+- Address = 10.45.20.2
+- Subnet Mask = 255.255.255.248
+
+##### Himmel (Fa0/1)
+- Address = 10.45.20.1
+- Subnet Mask = 255.255.255.248
+
+#### A4
+##### LakeKorridor
+- Gateway = 10.45.64.1
+- Address = 10.45.64.2
+- Subnet Mask = 255.255.255.224
+
+##### Frieren (Fa1/0)
+- Address = 10.45.64.1
+- Subnet Mask = 255.255.255.224
+
+
+#### A5
+##### Richter
+- Gateway = 10.46.80.1
+- Address = 10.46.80.2
+- Subnet Mask = 255.255.255.248
+
+##### Revolte
+- Gateway = 10.46.80.1
+- Address = 10.46.80.3
+- Subnet Mask = 255.255.255.248
+
+##### Eisen (Eth1/2)
+- Address = 10.46.80.1
+- Subnet Mask = 255.255.255.248
+
+
+#### A6
+##### BredRegion
+- Gateway = 10.46.4.1
+- Address = 10.46.4.2
+- Subnet Mask = 255.255.255.192
+
+##### Lawine (Fa0/1)
+- Address = 10.45.4.1
+- Subnet Mask = 255.255.255.192
+
+##### Heiter (Fa0/0)
+- Address = 10.46.4.3
+- Subnet Mask = 255.255.255.192
+
+
+#### A7
+##### Sein
+- Gateway = 10.46.0.1
+- Address = 10.46.0.2
+- Subnet Mask = 255.255.252.0
+
+##### RiegelCanyon
+- Gateway = 10.46.0.1
+- Address = 10.45.0.3
+- Subnet Mask = 255.255.252.0
+
+##### Heiter (Fa0/1)
+- Address = 10.46.0.1
+- Subnet Mask = 255.255.252.0
+
+
+#### A8
+##### GranzChannel
+- Gateway = 10.46.16.1
+- Address = 10.46.16.2
+- Subnet Mask = 255.255.254.0
+
+##### Linie (Fa0/1)
+- Address = 10.46.16.1
+- Subnet Mask = 255.255.254.0
+
+#### A9
+##### GrobeForest
+- Gateway = 10.46.68.1
+- Address = 10.46.68.2
+- Subnet Mask = 255.255.255.0
+
+##### Lugner (Fa1/0)
+- Address = 10.46.68.1
+- Subnet Mask = 255.255.255.0
+
+#### A10
+##### TurkRegion
+- Gateway = 10.46.64.1
+- Address = 10.46.64.2
+- Subnet Mask = 255.255.252.0
+
+##### Lugner (Fa0/1)
+- Address = 10.46.63.1
+- Subnet Mask = 255.255.252.0
+
+#### A11
+##### Stark
+- Gateway = 10.46.80.9
+- Address = 10.46.80.10
+- Subnet Mask = 255.255.255.252
+
+##### Eisen (Fa0/1)
+- Address = 10.46.80.9
+- Subnet Mask = 255.255.255.252
+
+
+#### A12
+##### RoyalCapital
+- Gateway = 10.47.0.1
+- Address = 10.47.0.2
+- Subnet Mask = 255.255.255.0
+
+##### WileRegion
+- Gateway = 10.47.0.1
+- Address = 10.47.0.3
+- Subnet Mask = 255.255.255.0
+
+##### Denken (Fa0/1)
+- Address = 10.47.0.1
+- Subnet Mask = 255.255.255.0
+
+#### A13 
+##### Fern (Fa0/0)
+- Address = 10.45.4.2
+- Subnet Mask = 255.255.255.252
+
+##### Flamme (Fa1/0)
+- Address = 10.45.4.1
+- Subnet Mask = 255.255.255.252
+
+
+#### A14
+##### Himmel (Fa0/0)
+- Address = 10.45.20.10
+- Subnet Mask = 255.255.255.252
+
+##### Flamme (Fa0/1)
+- Address = 10.45.20.9
+- Subnet Mask = 255.255.255.252
+
+
+#### A15
+##### Flamme (Fa0/0)
+- Address = 10.45.32.2
+- Subnet Mask = 255.255.255.252
+
+##### Frieren (Fa0/1)
+- Address = 20.45.32.1
+ -Subnet Mask = 255.255.255.252
+
+#### A16
+##### Frieren (Fa0/0)
+- Address = 10.45.128.2
+- Subnet Mask = 255.255.255.252
+
+##### Aura (Fa1/1)
+- Address = 10.45.128.1
+- Subnet Mask = 255.255.255.252
+
+
+#### A17
+##### Aura (Fa0/1)
+- Address = 10.46.128.1
+- Subnet Mask = 255.255.255.252
+
+##### Eisen (Fa0/0)
+- Address = 10.46.128.2
+- Subnet Mask = 255.255.255.252
+
+#### A18
+##### Eisen (Eth1/1)
+- Address = 10.46.80.1
+- Subnet Mask = 255.255.255.248
+
+##### Linie (Fa1/0)
+- Address = 10.46.8.1
+- Subnet Mask = 255.255.255.252
+
+
+#### A19
+##### Lawine (Fa0/0)
+- Address = 10.46.8.2
+- Subnet Mask = 255.255.255.252
+
+##### Linie (Fa1/0)
+- Address = 10.46.8.1
+- Subnet Mask = 255.255.255.252
+
+
+#### A20
+##### Eisen (Eth1/0)
+- Address = 10.46.72.1
+- Subnet Mask = 255.255.255.252
+
+##### Lugner (Fa0/0)
+- Address = 10.46.72.2
+- Subnet Mask = 255.255.255.252
+
+
+#### A21
+##### Aura (Fa1/0)
+- Address = 10.47.1.1
+- Subnet Mask = 255.255.255.252
+
+##### Denken (Fa0/0)
+- Address = 10.47.1.2
+- Subnet Mask = 255.255.255.252
+
+
+### Routing
+#### Aura
+![](images/image.png)
+![](images/image-1.png)
+![](images/image-2.png)
+
+#### Denken
+![](images/image-3.png)
+
+#### Frieren
+![](images/image-4.png)
+#### Flamme
+![](images/image-5.png)
+#### Fern
+![](images/image-6.png)
+#### Himmel
+![](images/image-7.png)
+#### Eisen
+![](images/image-8.png)
+![](images/image-9.png)
+#### Lugner
+![](images/image-10.png)
+#### Linie
+![](images/image-11.png)
+#### Lawine
+![](images/image-12.png)
+#### Heiter
+![](images/image-13.png)
 
 ## GNS3 VLSM
 ### Topologi
